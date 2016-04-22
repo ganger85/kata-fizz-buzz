@@ -12,7 +12,7 @@ class FizzBuzz2Spec extends FlatSpec with Matchers {
   }
 
   private def module(i: Int, divisor: Int): Option[String] = {
-    if (i % divisor == 0) Option(dictionary(divisor)) else None
+    if (i % divisor == 0) dictionary.get(divisor) else None
   }
 
   "processor" should "return 1 if input is 1" in {
